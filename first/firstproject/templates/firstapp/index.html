@@ -1,0 +1,19 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>The HTML5 for django</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+  {% comment %} <link rel="stylesheet" href="css/styles.css?v=1.0"> {% endcomment %}
+
+</head>
+
+<body>
+<h1>This is very simple</h1>
+<h1>Hi {{insert_me}}</h1>
+<img src="{% static 'images/tst.png' %} " alt="">
+  {% comment %} <script src="js/scripts.js"></script> {% endcomment %}
+</body>
+</html>
