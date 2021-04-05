@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import urllib
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,12 +79,14 @@ WSGI_APPLICATION = 'firstproject.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'tanim',
+        'HOST': 'mongodb+srv://tanim:abbatanim@clouddb.kzvmd.mongodb.net/testdb?retryWrites=true&w=majority',
+        'USER': 'tanim',
+        'PASSWORD': 'abbatanim',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
