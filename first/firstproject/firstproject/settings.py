@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'firstproject.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'djongo',
-        'NAME': 'tanim',
+        'NAME': 'testdb',
         'HOST': 'mongodb+srv://tanim:abbatanim@clouddb.kzvmd.mongodb.net/testdb?retryWrites=true&w=majority',
         'USER': 'tanim',
         'PASSWORD': 'abbatanim',

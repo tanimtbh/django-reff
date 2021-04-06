@@ -6,14 +6,29 @@
   
   <title>The HTML5 for django</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
-  {% comment %} <link rel="stylesheet" href="css/styles.css?v=1.0"> {% endcomment %}
 
 </head>
 
 <body>
-<h1>This is very simple</h1>
-<h1>Hi {{insert_me}}</h1>
-<img src="{% static 'images/tst.png' %} " alt="">
+<h1>Access records</h1>
+    {% if access_records %}
+      <table>
+        <thead>
+        <th>Site Name<th/>
+        <th>Date Accessed<th/>
+        <thead/>
+        {% for acc in access_records %}
+         <tr>
+         <td> {{acc.name}} <td/>
+         <td> {{acc.date}} <td/>
+         <tr/>
+        {% endfor %}
+      </table>
+      {% else %}
+        <p>No Access Record Found <p/>
+    
+     {% endif %}
+
   {% comment %} <script src="js/scripts.js"></script> {% endcomment %}
 </body>
 </html>
